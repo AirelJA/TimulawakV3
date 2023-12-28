@@ -145,6 +145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_Road_Solo
       objectReference: {fileID: 0}
+    - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7414500119360317721, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -563,6 +567,10 @@ PrefabInstance:
     - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_Name
       value: Tile_Road_Solo
+      objectReference: {fileID: 0}
+    - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7414500119360317721, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1647,6 +1655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_Road_Solo
       objectReference: {fileID: 0}
+    - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7414500119360317721, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -1973,6 +1985,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_Road_Solo
       objectReference: {fileID: 0}
+    - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7414500119360317721, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5
@@ -2087,6 +2103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3482265735283329681, guid: 2f496f081f9475a44bb640b0723910f4, type: 3}
+      propertyPath: field of view
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 8687767898629882690, guid: 2f496f081f9475a44bb640b0723910f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4417555
@@ -2129,7 +2149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9142091711001924922, guid: 2f496f081f9475a44bb640b0723910f4, type: 3}
       propertyPath: m_Constraints
-      value: 18
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2147,6 +2167,10 @@ PrefabInstance:
     - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_Name
       value: Tile_Road_Solo
+      objectReference: {fileID: 0}
+    - target: {fileID: 243997138788653771, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7414500119360317721, guid: 68e976025b9b47748ad0a39064b5596c, type: 3}
       propertyPath: m_LocalPosition.x
