@@ -26,7 +26,7 @@ public class playerMovement : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed * horizontalMovement);
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
-            playerRb.AddForce(Vector3.up * 4, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
             onGround = false;
         }
         //playerRb.AddForce(focalPoint.transform.forward * speed * forwardMovement);
