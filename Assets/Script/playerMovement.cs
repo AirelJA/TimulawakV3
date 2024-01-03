@@ -23,12 +23,36 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         horizontalMovement = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * horizontalMovement);
+
+        if (horizontalMovement < 0f) // Check if moving to the left
+        {
+            // Rotate the player by 180 degrees around the Y-axis
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        }
+        else if (horizontalMovement > 0f)
+        {
+            // Reset rotation if moving to the right
+            transform.eulerAngles = Vector3.zero;
+        }
+
+        // Move the player based on the input
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * Mathf.Abs(horizontalMovement));
+
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
             onGround = false;
         }
+
+        /*if (horizontalMovement > 0f)
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
+        else if (horizontalMovement < 0f)
+        {
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        }
+        */
         //playerRb.AddForce(focalPoint.transform.forward * speed * forwardMovement);
     }
 

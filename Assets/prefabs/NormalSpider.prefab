@@ -1192,9 +1192,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4718597320514436489}
   - component: {fileID: 6404493788130724346}
+  - component: {fileID: 2319906338072897521}
+  - component: {fileID: -9012416467279071095}
+  - component: {fileID: -20237765381308056}
   m_Layer: 0
   m_Name: NormalSpider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1237,6 +1240,60 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &2319906338072897521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002172390670175167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5839307, y: 1.8100235, z: 3.2997084}
+  m_Center: {x: 0.0037056208, y: 0.86894643, z: 0.05889654}
+--- !u!65 &-9012416467279071095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002172390670175167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.522557, y: 0.95680714, z: 2.429471}
+  m_Center: {x: 0.027419925, y: 1.9360399, z: -0.15938997}
+--- !u!114 &-20237765381308056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5002172390670175167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1b119bbe8a4274696259fd3ef89949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5006692857585361848
 GameObject:
   m_ObjectHideFlags: 0
