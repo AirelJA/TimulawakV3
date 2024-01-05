@@ -19,8 +19,18 @@ public class playerMovement : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        // Move the player based on the input
+
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
+            playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
+            onGround = false;
+        }
+    }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalMovement = Input.GetAxis("Horizontal");
 
@@ -35,14 +45,8 @@ public class playerMovement : MonoBehaviour
             transform.eulerAngles = Vector3.zero;
         }
 
-        // Move the player based on the input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * Mathf.Abs(horizontalMovement));
-
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
-        {
-            playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
-            onGround = false;
-        }
+        
 
         /*if (horizontalMovement > 0f)
         {
@@ -63,10 +67,10 @@ public class playerMovement : MonoBehaviour
             onGround = true;
         }
 
-        else if (collision.gameObject.CompareTag("deathTrigger"))
+        /*else if (collision.gameObject.CompareTag("deathTrigger"))
         {
             gameOver = true;
             onGround = false;
-        }
+        }*/
     }
 }
