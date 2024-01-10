@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     private float horizontalMovement;
     private GameObject focalPoint;
     public float speed = 5.0f;
+    private float boundary = 13.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,12 @@ public class playerMovement : MonoBehaviour
             playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
             onGround = false;
         }
+
+        if (transform.position.x > boundary)
+            transform.position = new Vector3(boundary, 6.5f, 6.5f);
+
+        if (transform.position.x < -boundary)
+            transform.position = new Vector3(-boundary, 290.5f, 290.5f);
     }
     // Update is called once per frame
     void FixedUpdate()
