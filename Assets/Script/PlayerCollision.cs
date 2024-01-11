@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == ("Enemy"))
+        if (collision.transform.tag == "Enemy")
         {
             GameManager.isGameOver = true;
             gameObject.SetActive(false);
+        }
+
+        if (collision.transform.tag == "Finish")
+        {
+            FinishStageTrigger.StageComplete();
         }
     }
 }

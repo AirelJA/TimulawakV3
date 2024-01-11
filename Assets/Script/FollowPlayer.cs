@@ -16,7 +16,7 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        offset = new Vector3(5, 3, 4);
+        offset = new Vector3(3, 1.5f, 1);
         transform.position = Player.transform.position + offset;
     }
 }

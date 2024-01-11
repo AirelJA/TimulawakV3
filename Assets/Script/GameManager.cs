@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public GameObject GameOverScreen;
+    public static GameManager Instance;
 
     //public TextMeshProUGUI gameoverText;
     //public Button restartButton;
@@ -38,5 +39,10 @@ public class GameManager : MonoBehaviour
     public void Reset()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StageComplete()
+    {
+        SceneManager.LoadScene(+1);
     }
 }
