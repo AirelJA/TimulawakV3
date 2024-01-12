@@ -10,7 +10,7 @@ public class playerMovement : MonoBehaviour
     private float horizontalMovement;
     private GameObject focalPoint;
     public float speed = 5.0f;
-    private float boundary = 13.0f;
+    private float boundary = 5.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +30,14 @@ public class playerMovement : MonoBehaviour
             onGround = false;
         }
 
-        if (transform.position.x > boundary)
-            transform.position = new Vector3(boundary, 6.5f, 6.5f);
+        if (transform.position.z < boundary)
+            transform.position = new Vector3(3.6f, 2.0f, 8.0f);
 
-        if (transform.position.x < -boundary)
-            transform.position = new Vector3(-boundary, 290.5f, 290.5f);
+        /*if (transform.position.z > -boundary)
+            transform.position = new Vector3(3.6f, 2.0f, 8.0f);
+
+        *//*if (transform.position.z < -boundary)
+            transform.position = new Vector3(-boundary, transform.position.x, transform.position.y);*/
     }
     // Update is called once per frame
     void FixedUpdate()
