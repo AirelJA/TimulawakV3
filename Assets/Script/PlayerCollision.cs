@@ -16,7 +16,10 @@ public class PlayerCollision : MonoBehaviour
 
         if (collision.transform.tag == "Finish")
         {
-            FinishStageTrigger.StageComplete();
+            //FinishStageTrigger.StageComplete();
+
+            GameManager.isNextStage = true;
+            gameObject.SetActive(false);
         }
     }
 }
