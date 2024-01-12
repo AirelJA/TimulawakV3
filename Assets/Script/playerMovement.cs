@@ -31,7 +31,7 @@ public class playerMovement : MonoBehaviour
         }
 
         if (transform.position.z < boundary)
-            transform.position = new Vector3(3.6f, 2.0f, 8.0f);
+            transform.position = new Vector3(3.6f, 2.0f, 5.5f);
 
         /*if (transform.position.z > -boundary)
             transform.position = new Vector3(3.6f, 2.0f, 8.0f);
