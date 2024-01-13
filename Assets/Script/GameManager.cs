@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     //public TextMeshProUGUI gameoverText;
     //public Button restartButton;
+    public string namePlayer;
+    public string namainput;
 
     public static bool isGameOver;
     public static bool isNextStage;
@@ -44,7 +48,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+    public void SaveData()
+    {
+        SaveData data = new SaveData();
+        data.namePlayer = namePlayer;
+
+        //if want to add another data to json file
+        // data.PlayerName = PlayerName //to save player name
+
+        string json = JsonUtility.ToJson(data);
+
+        //File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+        string path = GetSaveFilePath();
+        File.WriteAllText(path, json);
+    }
 
     public void Reset()
     {
@@ -63,4 +80,43 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void LoadData()
+    {
+        //string path = Application.persistentDataPath + "/savefile.json";
+        string path = GetSaveFilePath();
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+            namePlayer = data.namePlayer;
+        }
+    }
+
+    private string GetSaveFilePath()
+    {
+        string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        string gameFolder = Path.Combine(documentsPath, "UCP2");
+
+        // Create the game folder if it doesn't exist
+        if (!Directory.Exists(gameFolder))
+        {
+            Directory.CreateDirectory(gameFolder);
+        }
+
+        // Append the file name to the game folder path
+        return Path.Combine(gameFolder, "Savefile.json");
+    }
+}
+
+[Serializable]
+public class SaveData
+{
+    public int m_Points;
+    public string namePlayer;
+    // add the variable that want to save
+    //ex:
+    // public string Playername //to save playername
 }
