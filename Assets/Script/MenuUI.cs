@@ -43,7 +43,7 @@ public class MenuUI : MonoBehaviour
 
     public void Exit()
     {
-        //Application.Quit();
-        EditorApplication.ExitPlaymode();
+        Application.Quit();
+        //EditorApplication.ExitPlaymode();
     }
 }
