@@ -19,7 +19,7 @@ public class MenuUI : MonoBehaviour
     public void OnValueChanged()
     {
         playerName = input.text;
-        GameManager.Instance.namainput = playerName;
+        GameManager.Instance.namaInput = playerName;
     }
 
     // Update is called once per frame
@@ -30,22 +30,21 @@ public class MenuUI : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.LoadData();
+        /*GameManager.Instance.LoadData();*/
         namePlayer = GameManager.Instance.namePlayer;
 
     }
 
     public void StartMain()
     {
+        GameManager.Instance.namePlayer = playerName;
+        GameManager.Instance.SaveData();
         SceneManager.LoadScene(1);
     }
 
     public void Exit()
     {
-        //Application.Quit();
-
-        GameManager.Instance.namePlayer = playerName;
-        GameManager.Instance.SaveData();
-        EditorApplication.ExitPlaymode();
+        Application.Quit();
+        //EditorApplication.ExitPlaymode();
     }
 }

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     //public TextMeshProUGUI gameoverText;
     //public Button restartButton;
     public string namePlayer;
-    public string namainput;
+    public string namaInput;
 
     public static bool isGameOver;
     public static bool isNextStage;
@@ -26,18 +26,33 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
         isNextStage = false;
-        namePlayer = "DefaultName";
+
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            GameOverScreen = GameObject.Find("GameOverScreen");
+            GameOverScreen = GameObject.Find("NextStageScreen");
+        }*/
+
         if (isGameOver)
         {
             GameOverScreen.SetActive(true);
@@ -82,7 +97,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LoadData()
+    /*public void LoadData()
     {
         //string path = Application.persistentDataPath + "/savefile.json";
         string path = GetSaveFilePath();
@@ -94,7 +109,7 @@ public class GameManager : MonoBehaviour
 
             namePlayer = data.namePlayer;
         }
-    }
+    }*/
 
     private string GetSaveFilePath()
     {

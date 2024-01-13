@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            GameManager.isGameOver = true;
+            MainManager.isGameOver = true;
             gameObject.SetActive(false);
         }
 
@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
         {
             //FinishStageTrigger.StageComplete();
 
-            GameManager.isNextStage = true;
+            MainManager.isNextStage = true;
             gameObject.SetActive(false);
         }
     }
