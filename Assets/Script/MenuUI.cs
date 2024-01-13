@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class MenuUI : MonoBehaviour
 {
     public TMP_InputField input;
-    public TextMeshProUGUI scoreText;
 
     public string playerName;
 
@@ -34,7 +33,6 @@ public class MenuUI : MonoBehaviour
         GameManager.Instance.LoadData();
         namePlayer = GameManager.Instance.namePlayer;
 
-        scoreText.text = $"player : {namePlayer}";
     }
 
     public void StartMain()

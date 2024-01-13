@@ -114,7 +114,6 @@ public class GameManager : MonoBehaviour
 [Serializable]
 public class SaveData
 {
-    public int m_Points;
     public string namePlayer;
     // add the variable that want to save
     //ex:
