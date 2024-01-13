@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
         isNextStage = false;
+        namePlayer = "DefaultName";
     }
 
     // Start is called before the first frame update
